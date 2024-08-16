@@ -1,23 +1,21 @@
 package com.event.manager.entity;
 
-import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.List;
+import jakarta.persistence.*;
 
-@Entity
 @Data
+@Entity
+@Table(name = "speakers")
 public class Speaker {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private String bio;
-    private String expertise;
+    @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
-    @OneToMany(mappedBy = "speaker", cascade = CascadeType.ALL)
-    private List<Session> sessions;
-
+    // Additional fields specific to Speaker
 }
