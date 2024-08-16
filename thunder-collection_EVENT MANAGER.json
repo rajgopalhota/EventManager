@@ -1,0 +1,77 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "EVENT MANAGER",
+    "collectionId": "75cc69ce-ad41-48d9-aa09-4194255874d3",
+    "dateExported": "2024-08-16T10:15:40.245Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "ddd839cc-fa86-41ac-bc7a-9d5edc55efc2",
+            "name": "Events",
+            "containerId": "",
+            "created": "2024-08-16T09:47:52.417Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "034f7f33-46ce-4a7e-9693-b4db8c15db5d",
+            "colId": "75cc69ce-ad41-48d9-aa09-4194255874d3",
+            "containerId": "ddd839cc-fa86-41ac-bc7a-9d5edc55efc2",
+            "name": "Get events",
+            "url": "http://localhost:8080/api/events",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-08-16T09:48:10.047Z",
+            "modified": "2024-08-16T09:48:13.593Z",
+            "headers": []
+        },
+        {
+            "_id": "bf756f97-be6a-42db-a326-1588abf322eb",
+            "colId": "75cc69ce-ad41-48d9-aa09-4194255874d3",
+            "containerId": "ddd839cc-fa86-41ac-bc7a-9d5edc55efc2",
+            "name": "Create event",
+            "url": "http://localhost:8080/api/events",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-08-16T10:04:13.134Z",
+            "modified": "2024-08-16T10:05:15.979Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"name\": \"Tech Conference 2024\",\r\n  \"description\": \"A conference focusing on the latest advancements in technology.\",\r\n  \"location\": \"Virtual\",\r\n  \"startTime\": \"2024-09-15T10:00:00\",\r\n  \"endTime\": \"2024-09-15T16:00:00\"\r\n}\r\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "452d2aed-befb-4b01-b64b-0032d7b0473b",
+            "colId": "75cc69ce-ad41-48d9-aa09-4194255874d3",
+            "containerId": "ddd839cc-fa86-41ac-bc7a-9d5edc55efc2",
+            "name": "Update event",
+            "url": "http://localhost:8080/api/events/1",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-08-16T10:06:15.082Z",
+            "modified": "2024-08-16T10:07:36.044Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"name\": \"Updated Tech Conference 2024\",\r\n  \"description\": \"An updated description of the tech conference focusing on emerging technologies.\",\r\n  \"location\": \"Online\",\r\n  \"startTime\": \"2024-09-15T11:00:00\",\r\n  \"endTime\": \"2024-09-15T17:00:00\"\r\n}\r\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "c42ed93d-9668-479a-98d6-531883919643",
+            "colId": "75cc69ce-ad41-48d9-aa09-4194255874d3",
+            "containerId": "ddd839cc-fa86-41ac-bc7a-9d5edc55efc2",
+            "name": "Delete event",
+            "url": "http://localhost:8080/api/events/1",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-08-16T10:14:49.780Z",
+            "modified": "2024-08-16T10:15:08.073Z",
+            "headers": []
+        }
+    ],
+    "ref": "JGfvctWFh3xT9w_HNzpPun9UCqrdVKSSxAXK-bseRI9RyKch01M-wV6PAAOPMiVunVUP8TnUrAm33VEbx8ZMMQ"
+}
