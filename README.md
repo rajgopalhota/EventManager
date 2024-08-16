@@ -7,6 +7,7 @@ The Virtual Event Management System is a comprehensive solution designed to faci
 ## Features
 
 ### Backend (Spring Boot)
+
 - **Event Scheduling & Management:** RESTful APIs to manage events, sessions, speakers, and attendees. Includes endpoints for creating, updating, and deleting events, and fetching event details.
 - **Attendee Registration & Management:** APIs for user registration, session booking, and attendee management. Includes services for generating and validating QR codes for attendance.
 - **Content Delivery:** Integration with live streaming services, session recordings, and content sharing.
@@ -17,6 +18,7 @@ The Virtual Event Management System is a comprehensive solution designed to faci
 - **Admin Dashboard:** Interface for managing event details, user roles, payments, and notifications.
 
 ### Frontend (React.js)
+
 - **Event Listing & Details:** Pages for listing upcoming events, displaying details, and allowing registration or session joining.
 - **Interactive Q&A & Polling:** Real-time Q&A sessions and polls within each session using WebSocket.
 - **Networking Features:** Virtual lounges and chat rooms for attendee networking.
@@ -31,13 +33,13 @@ The Virtual Event Management System is a comprehensive solution designed to faci
 
 ### Project Versions
 
-| Component          | Version      |
-|--------------------|--------------|
-| Spring Boot        | 3.3.2        |
-| Gradle             | 8.10         |
-| Java               | 17           |
-| React              | [Current Version] |
-| Node.js            | v20.14.0     |
+| Component   | Version           |
+| ----------- | ----------------- |
+| Spring Boot | 3.3.2             |
+| Gradle      | 8.10              |
+| Java        | 17                |
+| React       | [Current Version] |
+| Node.js     | v20.14.0          |
 
 ### Prerequisites
 
@@ -51,26 +53,43 @@ The Virtual Event Management System is a comprehensive solution designed to faci
 #### Backend Setup
 
 1. **Clone the Repository:**
+
    ```bash
    git clone https://github.com/rajgopalhota/EventManager.git
    cd EventManager
    ```
 
 2. **Update `application.properties`:**
-   Configure database settings and other properties.
+   Configure the database and JWT settings in the `src/main/resources/application.properties` file as follows:
 
    ```properties
+
+   # Application Name
+   spring.application.name=event-manager
+
+   # Database Connection Configuration
    spring.datasource.url=jdbc:mysql://localhost:3306/event_manager
    spring.datasource.username=root
    spring.datasource.password=2003
    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
+   # JPA & Hibernate Configuration
    spring.jpa.hibernate.ddl-auto=update
    spring.jpa.show-sql=true
    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+   # JWT Secret Key
+   jwt.secret=your-secret-key-here
+
+   # JWT Expiration Time in milliseconds (e.g., 24 hours)
+   jwt.expiration=86400000
+
+   # Replace `your-secret-key-here` with a strong, randomly generated key for securing JWT tokens.
+
    ```
 
 3. **Build and Run the Backend:**
+
    ```bash
    ./gradlew clean build
    ./gradlew bootRun
@@ -82,16 +101,19 @@ The Virtual Event Management System is a comprehensive solution designed to faci
 #### Frontend Setup
 
 1. **Navigate to the Frontend Directory:**
+
    ```bash
    cd client
    ```
 
 2. **Install Dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Run the Frontend Application:**
+
    ```bash
    npm start
    ```
@@ -101,23 +123,23 @@ The Virtual Event Management System is a comprehensive solution designed to faci
 
 ## Backend Dependencies
 
-| Dependency                                  | Version       |
-|---------------------------------------------|---------------|
-| Spring Boot Starter Data JPA                | 3.3.2         |
-| Spring Boot Starter Mail                    | 3.3.2         |
-| Spring Boot Starter OAuth2 Client           | 3.3.2         |
-| Spring Boot Starter OAuth2 Resource Server  | 3.3.2         |
-| Spring Boot Starter Security                | 3.3.2         |
-| Spring Boot Starter Validation              | 3.3.2         |
-| Spring Boot Starter Web                     | 3.3.2         |
-| Spring Boot Starter WebSocket               | 3.3.2         |
-| Spring Boot Admin Starter Server            | 3.3.2         |
-| Lombok                                      | 1.18.26       |
-| MySQL Connector/J                           | 8.0.32        |
-| Spring Boot DevTools                        | 3.3.2         |
-| Spring Boot Starter Test                    | 3.3.2         |
-| Spring Security Test                       | 6.2.0         |
-| JUnit Platform Launcher                     | 1.8.2         |
+| Dependency                                 | Version |
+| ------------------------------------------ | ------- |
+| Spring Boot Starter Data JPA               | 3.3.2   |
+| Spring Boot Starter Mail                   | 3.3.2   |
+| Spring Boot Starter OAuth2 Client          | 3.3.2   |
+| Spring Boot Starter OAuth2 Resource Server | 3.3.2   |
+| Spring Boot Starter Security               | 3.3.2   |
+| Spring Boot Starter Validation             | 3.3.2   |
+| Spring Boot Starter Web                    | 3.3.2   |
+| Spring Boot Starter WebSocket              | 3.3.2   |
+| Spring Boot Admin Starter Server           | 3.3.2   |
+| Lombok                                     | 1.18.26 |
+| MySQL Connector/J                          | 8.0.32  |
+| Spring Boot DevTools                       | 3.3.2   |
+| Spring Boot Starter Test                   | 3.3.2   |
+| Spring Security Test                       | 6.2.0   |
+| JUnit Platform Launcher                    | 1.8.2   |
 
 ## Project Structure
 
