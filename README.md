@@ -52,11 +52,11 @@ The Virtual Event Management System is a comprehensive solution designed to faci
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-repository/virtual-event-management-system.git
-   cd virtual-event-management-system
+   git clone https://github.com/rajgopalhota/EventManager.git
+   cd EventManager
    ```
 
-2. **Update `application.properties` or `application.yml`:**
+2. **Update `application.properties`:**
    Configure database settings and other properties.
 
    ```properties
@@ -83,7 +83,7 @@ The Virtual Event Management System is a comprehensive solution designed to faci
 
 1. **Navigate to the Frontend Directory:**
    ```bash
-   cd frontend
+   cd client
    ```
 
 2. **Install Dependencies:**
@@ -129,10 +129,6 @@ The Virtual Event Management System is a comprehensive solution designed to faci
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes. Ensure that you follow the coding standards and include tests for new features or bug fixes.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ## Contact
 
-For any questions or issues, please contact [your-email@example.com](mailto:your-email@example.com).
+For any questions or issues, please contact [rajgopalhota@gmail.com](mailto:rajgopalhota@gmail.com).
