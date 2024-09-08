@@ -26,9 +26,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
-        UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(username, password);
-        return this.getAuthenticationManager().authenticate(authRequest);
+        return new UsernamePasswordAuthenticationToken(username, password);
     }
 
     @Override
@@ -37,7 +35,5 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         String token = jwtTokenProvider.generateToken(username);
 
         response.setHeader("Authorization", "Bearer " + token);
-        response.setContentType("application/json");
-        response.getWriter().write("{\"token\": \"" + token + "\"}");
     }
 }
